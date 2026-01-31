@@ -58,7 +58,7 @@ const PortfolioSummary: React.FC = () => {
           <Grid.Item key={index}>
             <Card
               title={metric.title}
-              style={{ '--text-color': profitColor }}
+              style={{ '--text-color': profitColor } as React.CSSProperties}
             >
               <div style={{ fontSize: '20px', fontWeight: 'bold', ...metric.valueStyle }}>
                 {metric.value}

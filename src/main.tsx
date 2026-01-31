@@ -6,8 +6,10 @@ import App from './App.tsx'
 
 // antd-mobile v5 兼容 React 19
 unstableSetRender((node, container) => {
-  container._reactRoot ||= createRoot(container);
-  const root = container._reactRoot;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const c = container as any;
+  c._reactRoot ||= createRoot(container);
+  const root = c._reactRoot;
   root.render(node);
   return async () => {
     await new Promise((resolve) => setTimeout(resolve, 0));

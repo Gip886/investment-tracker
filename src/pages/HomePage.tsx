@@ -179,7 +179,6 @@ const TransactionList: React.FC = () => {
         const tag = getTypeTag(t.type);
         const isBuy = t.type === 'buy';
         const amount = t.price * t.quantity;
-        const displayAmount = t.type === 'dividend' ? t.amount || t.price : amount;
         const totalAmount = isBuy ? amount + t.fee : amount - t.fee;
 
         return (

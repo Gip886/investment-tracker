@@ -1,4 +1,3 @@
-import React from 'react';
 import { Dialog, Input } from 'antd-mobile';
 
 export const prompt = (props: { title?: string; content?: string; placeholder?: string; defaultValue?: string }) => {
